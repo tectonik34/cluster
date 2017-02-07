@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Shell to use
+#$ -S /bin/bash
+# Name of the job in SGE
+#$ -N ich2
+# Name of the queue to use
+#$ -q cemeb.q 
+# Maximum hardware time allowed for this job
+#$ -l h_rt=00:33:00
+# Merge output (error and standard with '-j y') into one single file called my_job.out
+#$ -o ich.log -j y
+# run in the current directory
+#$ -cwd
+java -jar ~/Ichthyop_mercator/ichthyop-mercator2d.jar  ~/Ichthyop_mercator/config/Test_serveur_2.xml
